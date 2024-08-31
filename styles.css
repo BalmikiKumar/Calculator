@@ -1,0 +1,91 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #f0f0f0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(3, 180, 234);
+}
+span{
+    color: #e006c0;
+}
+.calculator {
+    background: #0cd786e4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    width: 300px;
+}
+
+.display {
+    width: 100%;
+    height: 40px;
+    text-align: right;
+    margin-left: -2px;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.buttons, .advanced-buttons {
+    display: grid;
+    gap: 10px;
+    
+}
+
+.buttons {
+    grid-template-columns: repeat(4, 1fr);
+     
+}
+
+.advanced-buttons {
+    grid-template-columns: repeat(1, 1fr);
+     
+}
+
+button {
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #f1f1f1;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    border: 2px solid blue;
+    box-shadow: #e6c200;
+}
+
+button:hover {
+    background-image: url("balmikiLogo.jpg");
+    color: blue;
+}
+
+button:active {
+    background: #d1d1d1;
+}
+
+button:nth-child(4n) {
+    background: #ffd700;
+}
+
+button:nth-child(4n):hover {
+    background: #e6c200;
+}
+
+button:nth-child(4n):active {
+    background: #b89d00;
+}
+
+button#equals {
+    background: #4caf50;
+    color: white;
+}
+
+button#equals:hover {
+    background: #45a049;
+}
