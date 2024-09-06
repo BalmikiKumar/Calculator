@@ -5,13 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .container {
+            display: flex;
+            align-items: center; /* Aligns items vertically in the middle */
+        }
+        .vertical-line {
+            width: 280px; /* Thin line */
+            height: 5px; /* Height of the line */
+            background-color: #ff0217; /* Line color */
+            margin: 0 20px; /* Space around the line */
+            margin: 10px; 
+        }
+    </style>
+
 </head>
 <body>
     <div class="calculator">
         <h3>Simple calculator <span><i>By Balmiki</i></span></h3>Result &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="balmikikumar.github.io/resume">More about me </a>
-        <input type="text" id="display" class="display" readonly />
-        <div class="buttons">
-            <button onclick="clearDisplay()">CLEAR</button>
+
+           <input type="text" id="display" class="display" readonly />
+            <div class="buttons">
+            <button onclick="clearDisplay()">C</button>
             <button onclick="deleteLast()">DEL</button>
             <button onclick="appendOperator('%')">%</button>
             <button onclick="appendOperator('/')">/</button>
@@ -37,10 +53,57 @@
             <button onclick="appendOperator('**')">^</button>
         </div>
         <div class="advanced-buttons">
-            <button onclick="sqrt()">√</button>
+            <button onclick="sqrt()">√ Square root</button>
         </div>
-    </div>
 
-    <script src="script.js"></script>
+
+
+        <div class="container"></div>
+            <details>
+                <summary>खेत जोताई का हिसाब </summary>
+                <div>
+                    <input type="text" id="bbValue" placeholder="Enter bbhg value">
+                    <input type="text" id="kkValue" placeholder="Kitna kth">
+                    <button onclick="storeValue()">Submit</button>
+                </div>
+            </details>
+        
+            <div class="vertical-line"></div> <!-- Vertical line between the details -->
+        
+            <details>
+                <summary>Extra chas</summary>
+                <div>
+                    <input type="text" id="bValue" placeholder="Enter bhg value">
+                    <input type="text" id="kValue" placeholder="Kitna kth">
+                    <button onclick="ExtraStoreValue()">Submit</button>
+                </div>
+            </details>
+        </div>
+        
+        <script>
+            function storeValue() {
+                let biVal = document.getElementById("bbValue").value;
+                let kth1 = biVal / 20;
+        
+                let kaiseKth = document.getElementById("kkValue").value;
+        
+                let finaKthValue = kth1 * kaiseKth;
+                alert("For any query Contact me : 7761855039\n\nटोटल हिसाब  =  " + finaKthValue);
+            }
+        
+            function ExtraStoreValue() {
+                let biVal = document.getElementById("bValue").value;
+                let kth = biVal / 20;
+                let kth1 = kth / 3;
+        
+                let kaiseKth = document.getElementById("kValue").value;
+        
+                let finaKthValu = kth1 * kaiseKth;
+                let finaKthValue=Math.floor(finaKthValu);
+                alert("For any query Contact me : 7761855039\n\nअतिरिक्त चास का हिसाब  =  " + finaKthValue);
+            }
+        </script>
+    </div>
+    <script src="script.js"></script>  
 </body>
 </html>
