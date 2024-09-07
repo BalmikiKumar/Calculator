@@ -62,8 +62,8 @@
             <details>
                 <summary>खेत जोताई का हिसाब </summary>
                 <div>
-                    <input type="text" id="bbValue" placeholder="कैसे बिगहा ? ">
-                    <input type="text" id="kkValue" placeholder="कितना। कट्ठा ?">
+                    <input type="number" id="bbValue" placeholder="कैसे बिगहा ? ">
+                    <input type="number" id="kkValue" placeholder="कितना। कट्ठा ?">
                     <button onclick="storeValue()">Submit</button>
                 </div>
             </details>
@@ -73,8 +73,9 @@
             <details>
                 <summary>Extra chas</summary>
                 <div>
-                    <input type="text" id="bValue" placeholder="कैसे बिगहा ? ">
-                    <input type="text" id="kValue" placeholder="कितना कट्ठा ?">
+                    <input type="number" id="bValue" placeholder="कैसे बिगहा ? ">
+                    <input type="number" id="kValue" placeholder="कितना कट्ठा ?">
+                    <input type="number" id="extrachas" placeholder="कितना चास अधिक ">
                     <button onclick="ExtraStoreValue()">Submit</button>
                 </div>
             </details>
@@ -97,8 +98,9 @@
                 let kth1 = kth / 3;
         
                 let kaiseKth = document.getElementById("kValue").value;
+                let extrChas = document.getElementById("extrachas").value;
         
-                let finaKthValu = kth1 * kaiseKth;
+                let finaKthValu = kth1 * kaiseKth * extrChas;
                 let finaKthValue=Math.floor(finaKthValu);
                 alert("For any query Contact me : 7761855039\n\nअतिरिक्त चास का हिसाब  =  " + finaKthValue);
             }
